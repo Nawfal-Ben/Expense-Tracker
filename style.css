@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin: auto;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto 40px;
+    padding-top: 20px;
+}
+
+.balance {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.balance span {
+    display: block;
+    font-size: 35px;
+}
+
+.earnings {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+}
+
+.earnings div {
+    width: 50%;
+    text-align: center;
+}
+
+.earnings span {
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#income {
+    color: #05bf05;
+}
+
+#expense {
+    color: red;
+}
+
+.earnings div:first-child {
+    border-right: 2px solid #e8e6e6;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e8e6e6;
+    padding-bottom: 10px;
+}
+
+.history {
+    margin-bottom: 20px;
+}
+
+.history div {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 15px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 1px 1px 1px #777;
+}
+
+.income-operation::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #05bf05;
+}
+
+.expense-operation::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: red;
+}
+
+.delete {
+    position: absolute;
+    background: red;
+    color: #fff;
+    padding: 2px 8px;
+    width: 20px;
+    left: -20px;
+    display: grid;
+    place-content: center;
+    user-select: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.history div:hover .delete {
+    opacity: 1;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: #9c88ff;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
